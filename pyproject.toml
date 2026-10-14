@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-content-manager"
+version = "0.1.0"
+description = "Foundation for a Telegram group content organizer"
+requires-python = ">=3.11"
+
+[project.scripts]
+telegram-manager = "telegram_manager.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+telegram_manager = ["schema.sql"]
